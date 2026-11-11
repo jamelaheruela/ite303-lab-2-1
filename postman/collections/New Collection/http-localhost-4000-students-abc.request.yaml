@@ -1,0 +1,9 @@
+$kind: http-request
+name: http://localhost:4000/students/abc
+description: ""
+url: http://localhost:4000/students/abc
+method: PUT
+body:
+  type: json
+  content: ""
+order: 3000

@@ -1,0 +1,21 @@
+$kind: http-request
+name: http://localhost:4000/students/6
+description: ""
+url: http://localhost:4000/students/6
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \  \"student_number\": \"2026-206\",\r
+
+    \  \"first_name\": \"Faye\",\r
+
+    \  \"last_name\": \"Mendoza\",\r
+
+    \  \"course\": \"BSIT\",\r
+
+    \  \"year_level\": 2\r
+
+    }"
+order: 5000
