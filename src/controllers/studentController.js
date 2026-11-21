@@ -77,9 +77,9 @@ export async function createStudent(req, res) {
     try {
         const result = await pool.query(`INSERT INTO students
         (student_number, first_name, last_name, course, year_level)
-       VALUES ($1, $2, $3, $4, $5)
-       RETURNING id, student_number, first_name, last_name,
-                 course, year_level;`, [
+    VALUES ($1, $2, $3, $4, $5)
+    RETURNING id, student_number, first_name, last_name,
+                course, year_level;`, [
             student_number.trim(),
             first_name.trim(),
             last_name.trim(),
