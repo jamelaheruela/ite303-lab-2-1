@@ -1,6 +1,14 @@
 import { Pool } from 'pg';
+
 const databaseUrl = process.env.DATABASE_URL;
+
 if (!databaseUrl) {
-    throw new Error('DATABASE_URL is missing from .env file.');
+    throw new Error('DATABASE_URL is missing.');
 }
-export const pool = new Pool({ connectionString: databaseUrl });
+
+export const pool = new Pool({
+    connectionString: databaseUrl,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
