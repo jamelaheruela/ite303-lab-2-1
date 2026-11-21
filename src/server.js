@@ -5,6 +5,8 @@ const app = express();
 app.use(express.json());
 app.use('/students', studentRoutes);
 // Start server
-app.listen(4000, () => {
-    console.log('Server running at http://localhost:4000');
+
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
 });
